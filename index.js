@@ -14,7 +14,7 @@ app.use(express.json());
 const mongoURI = 'mongodb+srv://vincentmunywoki12:Vincent123@cluster0.2xglm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // my connection string
 
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://vincentmunywoki12:Vincent123@cluster0.2xglm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error: ', err));
 
