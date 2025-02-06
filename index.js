@@ -10,11 +10,13 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Connecting to MongoDB
+// MongoDB connection string
+const mongoURI = 'mongodb+srv://vincentmunywoki12:<db_password>@cluster0.2xglm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // my connection string
+
 mongoose
-  .connect('your-mongodb-atlas-connection-string', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log('MongoDB connection error: ', err));
 
 // Use auth routes
 app.use('/api/auth', authRoutes);
