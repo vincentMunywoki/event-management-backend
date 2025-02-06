@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection string
-const mongoURI = 'mongodb+srv://vincentmunywoki12:<db_password>@cluster0.2xglm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // my connection string
+const mongoURI = 'mongodb+srv://vincentmunywoki12:Vincent123@cluster0.2xglm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // my connection string
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
