@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
+
 const PORT = 5000;
 
 // Middleware
